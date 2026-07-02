@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brandon Fernandez Rojas | Senior DevOps, Platform & SRE Engineer</title>
+<meta name="description" content="Senior DevOps, Platform and Site Reliability Engineer with 9+ years across AWS, Kubernetes, Terraform, GitLab CI/CD, GitHub Actions, GitOps, observability and enterprise cloud infrastructure.">
+<meta name="author" content="Brandon Fernandez Rojas">
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-soft: #101a30;
+    --card: #121d33;
+    --card-2: #16223c;
+    --line: #273757;
+    --text: #e7edf7;
+    --muted: #a8b6cf;
+    --muted-2: #7f8da8;
+    --accent: #7cc4ff;
+    --accent-2: #b794ff;
+    --success: #5eead4;
+    --chip: #1c2846;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+    line-height: 1.58;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap {
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 34px 0 64px;
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 44px;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background:
+      radial-gradient(900px 380px at -10% -20%, rgba(124,196,255,.20), transparent 60%),
+      radial-gradient(780px 360px at 105% 0%, rgba(183,148,255,.17), transparent 55%),
+      linear-gradient(180deg, #101a30, #0d1629);
+  }
+
+  .eyebrow {
+    margin: 0 0 12px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.02;
+    letter-spacing: -.04em;
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .summary {
+    max-width: 780px;
+    margin: 18px 0 0;
+    color: var(--muted);
+    font-size: 17px;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--success); display: inline-block; }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #182449;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 700;
+    transition: .16s ease;
+  }
+
+  .button:hover { border-color: var(--accent); transform: translateY(-1px); text-decoration: none; }
+  .button.primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #07111f; border: 0; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .stat {
+    padding: 15px;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: rgba(255,255,255,.035);
+  }
+
+  .stat strong { display: block; color: var(--accent); font-size: 22px; line-height: 1.1; }
+  .stat span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
+
+  .tech-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .tech {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 11px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(28,40,70,.82);
+    color: var(--text);
+    font-size: 12.5px;
+    font-weight: 650;
+  }
+
+  .tech img { width: 16px; height: 16px; display: block; }
+
+  section { margin-top: 38px; }
+
+  .section-title {
+    margin: 0 0 14px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+  }
+
+  .card {
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--card);
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .skill {
+    padding: 17px;
+    border: 1px solid rgba(39,55,87,.85);
+    border-radius: 14px;
+    background: var(--card-2);
+  }
+
+  .skill h3 {
+    margin: 0 0 10px;
+    color: var(--white);
+    font-size: 14px;
+  }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+
+  .chip {
+    padding: 5px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--chip);
+    color: #dce6f7;
+    font-size: 12.5px;
+  }
+
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before { content: ""; position: absolute; left: 6px; top: 7px; bottom: 7px; width: 2px; background: linear-gradient(180deg, var(--accent), var(--accent-2), transparent); }
+
+  .job { position: relative; padding-bottom: 28px; }
+  .job:last-child { padding-bottom: 0; }
+  .job::before { content: ""; position: absolute; left: -24px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); box-shadow: 0 0 0 4px rgba(124,196,255,.13); }
+  .job h3 { margin: 0; color: var(--white); font-size: 18px; line-height: 1.35; }
+  .company { color: var(--accent); font-weight: 750; }
+  .when { margin: 2px 0 10px; color: var(--muted-2); font-size: 13px; }
+  .job ul { margin: 0; padding-left: 19px; color: #d6dfef; }
+  .job li { margin: 6px 0; }
+  .job strong { color: var(--white); font-weight: 700; }
+
+  .two-col { display: grid; grid-template-columns: 1.45fr .9fr; gap: 16px; }
+  .subheading { margin: 0 0 10px; color: var(--white); font-size: 15px; }
+  .body-copy { margin: 0; color: #d6dfef; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    color: var(--muted-2);
+    text-align: center;
+    font-size: 12.5px;
+  }
+
+  @media (max-width: 760px) {
+    .wrap { width: min(100% - 28px, 1080px); padding-top: 18px; }
+    .hero { padding: 28px 22px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .skills, .two-col { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    :root { --bg: #fff; --card: #fff; --card-2: #fff; --text: #111827; --muted: #374151; --muted-2: #4b5563; --line: #d1d5db; --chip: #f3f4f6; --white: #111827; }
+    body { background: #fff; color: #111827; }
+    .wrap { width: 100%; padding: 0; }
+    .hero, .card, .skill, .stat { background: #fff !important; box-shadow: none; }
+    .button, .actions, .tech-strip { display: none; }
+    .gradient-text { color: #111827; -webkit-text-fill-color: #111827; }
+    .section-title, .eyebrow, .company, a { color: #0f4c81; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Portfolio · Professional CV</p>
+    <h1>Brandon Fernandez Rojas<br><span class="gradient-text">Senior DevOps · Platform · Site Reliability Engineer</span></h1>
+    <p class="summary">Senior DevOps Engineer with 9+ years designing, automating, and operating enterprise cloud and hybrid infrastructure. Deep expertise across AWS, Linux, Kubernetes, Terraform, GitLab CI/CD, GitHub Actions, and GitOps, with a proven track record of improving production reliability, tightening security posture, and eliminating toil through automation. Comfortable owning incident response, observability, and platform tooling end-to-end across globally distributed teams.</p>
+
+    <div class="meta" aria-label="Contact information">
+      <span><span class="status-dot"></span> Open to senior international roles</span>
+      <span>Zapopan, Jalisco, Mexico</span>
+      <span><a href="tel:+523328221329">+52 332 822 1329</a></span>
+      <span><a href="mailto:brandon.rojas.cloud@gmail.com">brandon.rojas.cloud@gmail.com</a></span>
+      <span><a href="https://www.linkedin.com/in/brandon-fernandez-rojas" target="_blank" rel="noopener">linkedin.com/in/brandon-fernandez-rojas</a></span>
+    </div>
+
+    <div class="actions">
+      <a class="button primary" href="mailto:brandon.rojas.cloud@gmail.com">Contact</a>
+      <a class="button" href="https://www.linkedin.com/in/brandon-fernandez-rojas" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="button" href="https://github.com/brandonrojascloud-73dev" target="_blank" rel="noopener">GitHub</a>
+      <button class="button" onclick="window.print()">Save as PDF</button>
+    </div>
+
+    <div class="stats" aria-label="Professional highlights">
+      <div class="stat"><strong>9+ years</strong><span>Cloud, DevOps and SRE delivery</span></div>
+      <div class="stat"><strong>AWS</strong><span>DevOps Pro, SysOps, Cloud Practitioner</span></div>
+      <div class="stat"><strong>GitOps</strong><span>Terraform, GitLab CI/CD, GitHub Actions, FluxCD</span></div>
+      <div class="stat"><strong>ES / EN</strong><span>Spanish native, English advanced</span></div>
+    </div>
+
+    <div class="tech-strip" aria-label="Core technology logos">
+      <span class="tech"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS logo">AWS</span>
+      <span class="tech"><img src="https://cdn.simpleicons.org/terraform/844FBA" alt="Terraform logo">Terraform</span>
+      <span class="tech"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes logo">Kubernetes</span>
+      <span class="tech"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker logo">Docker</span>
+      <span class="tech"><img src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="GitLab logo">GitLab CI/CD</span>
+      <span class="tech"><img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="GitHub Actions logo">GitHub Actions</span>
+      <span class="tech"><img src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins logo">Jenkins</span>
+      <span class="tech"><img src="https://cdn.simpleicons.org/datadog/632CA6" alt="Datadog logo">Datadog</span>
+      <span class="tech"><img src="https://cdn.simpleicons.org/grafana/F46800" alt="Grafana logo">Grafana</span>
+      <span class="tech"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo">Python</span>
+      <span class="tech"><img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux logo">Linux</span>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">Core Technical Skills</h2>
+    <div class="card skills">
+      <div class="skill"><h3>Cloud & Platforms</h3><div class="chips"><span class="chip">AWS</span><span class="chip">EC2</span><span class="chip">VPC</span><span class="chip">IAM</span><span class="chip">S3</span><span class="chip">RDS</span><span class="chip">ELB</span><span class="chip">EBS</span><span class="chip">CloudTrail</span><span class="chip">Systems Manager</span><span class="chip">Secrets Manager</span><span class="chip">KMS</span><span class="chip">Azure</span><span class="chip">Cloudflare</span></div></div>
+      <div class="skill"><h3>IaC & Automation</h3><div class="chips"><span class="chip">Terraform</span><span class="chip">CloudFormation</span><span class="chip">Ansible</span><span class="chip">Packer</span><span class="chip">AWS Systems Manager</span><span class="chip">Python</span><span class="chip">Bash</span><span class="chip">PowerShell</span></div></div>
+      <div class="skill"><h3>Containers & Orchestration</h3><div class="chips"><span class="chip">Kubernetes</span><span class="chip">Amazon EKS</span><span class="chip">Amazon ECS</span><span class="chip">Docker</span><span class="chip">FluxCD</span><span class="chip">GitOps</span><span class="chip">Helm-style workflows</span></div></div>
+      <div class="skill"><h3>CI/CD & SCM</h3><div class="chips"><span class="chip">GitLab CI/CD</span><span class="chip">GitHub Actions</span><span class="chip">Jenkins</span><span class="chip">Git workflows</span><span class="chip">Pipeline design</span><span class="chip">Pipeline troubleshooting</span></div></div>
+      <div class="skill"><h3>Observability</h3><div class="chips"><span class="chip">Datadog</span><span class="chip">Grafana</span><span class="chip">CloudWatch</span><span class="chip">Elasticsearch</span><span class="chip">PagerDuty</span><span class="chip">Icinga</span></div></div>
+      <div class="skill"><h3>Security & Compliance</h3><div class="chips"><span class="chip">IAM</span><span class="chip">RBAC</span><span class="chip">KMS</span><span class="chip">Secrets Manager</span><span class="chip">SOPS</span><span class="chip">SELinux</span><span class="chip">CrowdStrike Falcon</span><span class="chip">VPN</span><span class="chip">Security Groups</span></div></div>
+      <div class="skill"><h3>Operating Systems</h3><div class="chips"><span class="chip">RHEL</span><span class="chip">Ubuntu</span><span class="chip">SUSE</span><span class="chip">Fedora</span><span class="chip">Windows Server</span><span class="chip">LDAP integration</span></div></div>
+      <div class="skill"><h3>Methodologies</h3><div class="chips"><span class="chip">SRE practices</span><span class="chip">Incident response</span><span class="chip">RCA</span><span class="chip">GitOps</span><span class="chip">Agile</span><span class="chip">ITIL</span><span class="chip">DevSecOps</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="card timeline">
+      <article class="job">
+        <h3>Senior DevOps Engineer — <span class="company">Teradata</span></h3>
+        <div class="when">May 2023 – Present</div>
+        <ul>
+          <li>Own end-to-end observability across <strong>Datadog, Elasticsearch, and Grafana</strong>, designing dashboards, log pipelines, and metric-based alerts that improve mean-time-to-detect on production services.</li>
+          <li>Operate and evolve <strong>CI/CD and GitOps delivery</strong> using GitLab CI, GitHub Actions, Terraform, and FluxCD to standardize infrastructure provisioning and application rollouts.</li>
+          <li>Maintain reliability of <strong>EKS and ECS workloads</strong>, troubleshooting Docker and Kubernetes issues such as probes, rollouts, and resource pressure to sustain high availability.</li>
+          <li>Harden secrets management using <strong>SOPS with AWS KMS</strong> and manage backup and recovery workflows across AWS and Azure to meet security and compliance requirements.</li>
+          <li>Partner with global engineering teams and customers on PoCs, KTs, and implementation sessions, delivering resilient DevOps solutions and clear operational runbooks.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Senior Infrastructure Cloud Engineer — <span class="company">IBM</span></h3>
+        <div class="when">Jun 2021 – May 2023</div>
+        <ul>
+          <li>Provisioned and operated <strong>AWS infrastructure</strong> across EC2, S3, VPN tunnels, ELBs, and ECS clusters supporting enterprise workloads.</li>
+          <li>Codified infrastructure with <strong>Terraform</strong> and automated patching and configuration through AWS Systems Manager and Ansible for consistent, version-controlled builds.</li>
+          <li>Enforced cloud security posture via IAM policy design, CloudTrail auditing, and SOPS/KMS encryption, aligning environments with the <strong>AWS Well-Architected Framework</strong>.</li>
+          <li>Integrated LDAP-based centralized identity across Linux workloads and administered access controls for hybrid teams.</li>
+          <li>Monitored and resolved infrastructure incidents using CloudWatch, Grafana, and Icinga; deployed and troubleshot CrowdStrike Falcon and SaltStack agents.</li>
+          <li>Developed automation in Python, PowerShell, and SSM Run Command; managed GitHub Actions and GitLab CI/CD pipelines and supported RDS/Aurora operations.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Senior Cloud Engineer — <span class="company">HCL</span></h3>
+        <div class="when">Jan 2020 – Jun 2021</div>
+        <ul>
+          <li>Built and maintained multi-cloud infrastructure across <strong>AWS, Azure, and Cloudflare</strong> for high-availability workloads.</li>
+          <li>Automated provisioning and configuration with Terraform, Ansible, and Packer; administered RHEL, SLES, Fedora, and Ubuntu fleets with LDAP integration.</li>
+          <li>Operated networking and security including VPC, firewalls, security groups, and NACLs, and implemented <strong>GitOps workflows with FluxCD</strong> for Kubernetes application delivery.</li>
+          <li>Tuned platform performance and reliability using Datadog, Grafana, Elasticsearch, and PagerDuty; optimized workloads across EKS and ECS.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Linux Systems Engineer — <span class="company">TATA Consultancy Services</span></h3>
+        <div class="when">Jan 2019 – Jan 2020</div>
+        <ul>
+          <li>Supported Linux and Windows server fleets, applying cloud security best practices, IAM, and encryption standards.</li>
+          <li>Provisioned VPCs, storage, and compute using IaC and developed <strong>GitLab CI/CD pipelines</strong> for cloud-native deployment workflows.</li>
+          <li>Monitored AWS infrastructure including IAM, EC2, CloudWatch, and CloudTrail; triaged vulnerabilities and managed SELinux security policies.</li>
+          <li>Reviewed Python code and authored Bash automation to reduce repetitive operational work.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>System Administrator — <span class="company">ITSystem</span></h3>
+        <div class="when">Jan 2018 – Feb 2019</div>
+        <ul>
+          <li>Administered Linux and Windows servers with hands-on troubleshooting; managed AWS and VMware infrastructure monitoring via Datadog, Grafana, and CloudWatch.</li>
+          <li>Remediated vulnerabilities using Ansible; upgraded and decommissioned servers via AWS SSM and Ansible; scripted operations in Bash and Python.</li>
+          <li>Owned RHEL permissions administration, WebSphere support, and disaster recovery, backup, and restore procedures.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Senior Operations Analyst — <span class="company">Cognizant</span></h3>
+        <div class="when">Sep 2016 – Jan 2018</div>
+        <ul>
+          <li>Delivered remote technical support for VPN connectivity, Windows systems, and ERP-related incidents; handled service requests through ServiceNow, including Active Directory user administration.</li>
+          <li>Documented resolutions, escalated critical issues to internal IT teams, and contributed to knowledge-transfer materials.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Certifications, Education & Languages</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3 class="subheading">Certifications</h3>
+        <div class="chips">
+          <span class="chip">AWS Certified DevOps Engineer – Professional</span>
+          <span class="chip">AWS Certified SysOps Administrator – Associate</span>
+          <span class="chip">AWS Certified Cloud Practitioner</span>
+          <span class="chip">Datadog SRE 101 Fundamentals</span>
+          <span class="chip">Agile Certified</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="subheading">Education & Languages</h3>
+        <p class="body-copy"><strong>Computer Systems Technologist</strong><br>Centro de Enseñanza Técnica Industrial (CETI)</p>
+        <div class="chips" style="margin-top:12px"><span class="chip">Spanish · Native</span><span class="chip">English · Advanced</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Built and deployed through GitHub Actions and GitHub Pages. © Brandon Fernandez Rojas.
+  </footer>
+</div>
+</body>
+</html>
