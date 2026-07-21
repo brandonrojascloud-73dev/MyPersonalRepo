@@ -104,14 +104,44 @@ Computer Systems Technologist — Centro de Enseñanza Técnica Industrial (CETI
 - Spanish: Native
 - English: Advanced
 
+## Case Studies
+
+Real-world infrastructure challenges solved in production environments. Each case study documents the problem, investigation process, root cause analysis, solution, and measurable outcomes.
+
+### Production Troubleshooting & Debugging
+- **[Jenkins CPS Serialization Fix](case-studies/01-jenkins-cps-fix/)** — Production pipeline crash caused by non-serializable objects in CPS transformation
+- **[Istio Rate Limiting: Configured but Never Working](case-studies/02-istio-rate-limiting/)** — Security control that appeared configured but was silently disabled by default
+
+### Cloud Architecture & Cost Optimization
+- **[CloudTrail Lake Cost Optimization](case-studies/03-cloudtrail-cost-optimization/)** — 84% cost reduction through selective event ingestion architecture
+- **[Central Hub Multi-Account Architecture](case-studies/07-central-hub-architecture/)** — Hub-and-spoke design for 50+ AWS accounts with Transit Gateway
+
+### Platform Engineering & Automation
+- **[Ephemeral GitHub Actions Runners](case-studies/04-ephemeral-gha-runners/)** — Auto-scaling runner fleet with 61% cost reduction and ephemeral isolation
+- **[AWS Audit Automation](case-studies/05-aws-audit-automation/)** — Multi-account audit scripts reducing analyst time by 95%
+
+### Security & Zero Trust
+- **[RBAC & Network Policies: Zero Trust in Kubernetes](case-studies/06-rbac-network-policies/)** — Deny-by-default networking and least-privilege RBAC implementation
+
+### Large-Scale Operations
+- **[Kubernetes Cluster Migration: Zero Downtime](case-studies/07-k8s-cluster-migration/)** — Migrating 200+ services with DNS-weighted cutover and instant rollback
+
+### Chaos Engineering & Failure Scenarios
+- **[Chaos Engineering: Designing Failure Scenarios](case-studies/08-chaos-engineering-design/)** — Structured experiment framework with blast radius containment and intentional defect variants
+- **[Reproducible Infrastructure Test Environments](case-studies/09-reproducible-test-environments/)** — Golden reference solutions with deterministic mutations for training and validation
+
+### Observability & Reliability
+- **[Observability & SLO Implementation](case-studies/10-observability-slo-implementation/)** — Error budgets, burn rate alerts, and SLO-driven engineering decisions
+
 ## Repository Purpose
 
-This repository hosts a professional interactive resume and portfolio using a static HTML page deployed through GitHub Pages. The deployment pipeline is intentionally simple and production-oriented:
+This repository serves as a professional portfolio showcasing real-world infrastructure expertise:
 
-- Static HTML/CSS with no runtime framework dependency
-- GitHub Actions workflow for automated deployment on every push to `main`
-- GitHub Pages hosting
-- README aligned with the published portfolio content
+- **Interactive portfolio** deployed via GitHub Pages (static HTML/CSS, no framework dependencies)
+- **10 public case studies** documenting production troubleshooting, architecture decisions, and measurable outcomes
+- **GitHub Actions CI/CD** for automated deployment on every push to `main`
+
+The case studies demonstrate senior-level problem-solving across troubleshooting, cost optimization, platform engineering, security, chaos engineering, and observability.
 
 ## Deployment
 
